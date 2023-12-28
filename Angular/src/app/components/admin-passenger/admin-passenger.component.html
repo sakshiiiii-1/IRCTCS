@@ -1,0 +1,33 @@
+
+<table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Passenger ID</th>
+      <th>Passenger Name</th>
+      <th>Passenger Age</th>
+      <th>Passenger Contact</th>
+      <th>Passenger Country</th>
+      <th>Passenger Preference</th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let passenger of passengerList">
+      <td>{{ passenger.passengerId }}</td>
+      <td>{{ passenger.passengerName }}</td>
+      <td>{{ passenger.passengerAge }}</td>
+      <td>{{ passenger.passengerContact }}</td>
+      <td>{{ passenger.passengerCountry }}</td>
+      <td>{{ passenger.passengerPrefer }}</td>
+      <td>
+        <button (click)="deletePassengers(passenger.passengerId)">
+          Delete
+        </button>
+        <!-- Add other buttons as needed -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <button (click)="getAllPassengers()">Get All Passengers</button>
+</div>

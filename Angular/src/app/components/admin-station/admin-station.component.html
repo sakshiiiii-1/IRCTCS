@@ -1,0 +1,126 @@
+<div>
+  <h1>Station Data</h1>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Station ID</th>
+        <th>Station From</th>
+        <th>Station To</th>
+        <th>Arrival Time</th>
+        <th>Reach Time</th>
+        <th>Total Time</th>
+        <th>Sleeper Tickets Available</th>
+        <th>Sleeper Ticket Price</th>
+        <th>2nd AC Tickets Available</th>
+        <th>2nd AC Ticket Price</th>
+        <th>3rd AC Tickets Available</th>
+        <th>3rd AC Ticket Price</th>
+        <th>1st AC Tickets Available</th>
+        <th>1st AC Ticket Price</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let station of StationList">
+        <td>{{ station.stationId }}</td>
+        <td>{{ station.stationFrom }}</td>
+        <td>{{ station.stationTo }}</td>
+        <td>{{ station.arrivalTime }}</td>
+        <td>{{ station.reachTime }}</td>
+        <td>{{ station.totalTime }}</td>
+        <td>{{ station.sleeperTicketsAvailable }}</td>
+        <td>{{ station.sleeperTicketPrice }}</td>
+        <td>{{ station.secondAcTicketsAvailable }}</td>
+        <td>{{ station.secondAcTicketPrice }}</td>
+        <td>{{ station.thirdAcTicketsAvailable }}</td>
+        <td>{{ station.thirdAcTicketPrice }}</td>
+        <td>{{ station.firstAcTicketsAvailable }}</td>
+        <td>{{ station.firstAcTicketPrice }}</td>
+        <td>
+          <button (click)="deleteStations(station.stationId)">Delete</button>
+          <!-- Add update functionality if needed -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <form (ngSubmit)="addStations()">
+    <label for="stationFrom">Station From:</label>
+    <input
+      type="text"
+      id="stationFrom"
+      [(ngModel)]="StationData.stationFrom"
+      name="stationFrom"
+      required
+    />
+
+    <label for="stationTo">Station To:</label>
+    <input
+      type="text"
+      id="stationTo"
+      [(ngModel)]="StationData.stationTo"
+      name="stationTo"
+      required
+    />
+
+    <label for="arrivalTime">Arrival Time:</label>
+    <input
+      type="text"
+      id="arrivalTime"
+      [(ngModel)]="StationData.arrivalTime"
+      name="arrivalTime"
+      required
+    />
+
+    <label for="reachTime">Reach Time:</label>
+    <input
+      type="text"
+      id="reachTime"
+      [(ngModel)]="StationData.reachTime"
+      name="reachTime"
+      required
+    />
+
+    <label for="totalTime">Total Time:</label>
+    <input
+      type="text"
+      id="totalTime"
+      [(ngModel)]="StationData.totalTime"
+      name="totalTime"
+      required
+    />
+
+    <label for="sleeperTicketsAvailable">Sleeper Tickets Available:</label>
+    <input
+      type="number"
+      id="sleeperTicketsAvailable"
+      [(ngModel)]="StationData.sleeperTicketsAvailable"
+      name="sleeperTicketsAvailable"
+      required
+    />
+
+    <label for="sleeperTicketPrice">Sleeper Ticket Price:</label>
+    <input
+      type="number"
+      id="sleeperTicketPrice"
+      [(ngModel)]="StationData.sleeperTicketPrice"
+      name="sleeperTicketPrice"
+      required
+    />
+
+    <label for="date">Date:</label>
+    <input
+      type="date"
+      id="date"
+      [(ngModel)]="StationData.date"
+      name="date"
+      required
+    />
+
+    <!-- Add similar labels and input fields for other properties -->
+
+    <button type="submit">Add Station</button>
+  </form>
+</div>

@@ -1,0 +1,103 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #3498db; /* Blue background color */
+}
+
+form {
+  margin-top: 80px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px; /* Wider width */
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+label,
+input {
+  width: calc(48% - 10px);
+  margin: 10px;
+}
+
+label {
+  color: #555;
+  font-weight: bold;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+div {
+  color: #e74c3c;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d35400;
+}
+
+/* Dropdown container styles */
+select {
+  /* width: 100%; */
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-right: 237px;
+}
+
+/* Styling the dropdown arrow */
+select:after {
+  content: '\25BC'; /* Unicode character for the down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* To allow clicking through the arrow */
+}
+
+/* Optional: Hover styles for the dropdown */
+select:hover {
+  border-color: #666;
+}
+
+/* Optional: Focus styles for the dropdown */
+select:focus {
+  outline: none;
+  border-color: #3498db; /* Example color, change as needed */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Example shadow, change as needed */
+}

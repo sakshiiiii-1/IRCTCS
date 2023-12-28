@@ -1,0 +1,74 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Heading styles */
+p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff; /* Blue color */
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Header styles */
+.table thead {
+  background-color: #343a40; /* Dark background color */
+  color: #fff; /* Text color */
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #dee2e6; /* Border color */
+}
+
+/* Alternating row colors */
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa; /* Light background color */
+}
+
+/* Button styles */
+button {
+  background-color: #dc3545; /* Red color */
+  color: #fff; /* Text color */
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #c82333; /* Darker red color on hover */
+}
+
+/* Get All Users button styles */
+div button {
+  background-color: #28a745; /* Green color */
+  color: #fff; /* Text color */
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hover effect for Get All Users button */
+div button:hover {
+  background-color: #218838; /* Darker green color on hover */
+}

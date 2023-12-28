@@ -1,0 +1,94 @@
+<body>
+  <form (ngSubmit)="userRegister()">
+    <h2>Register Here</h2>
+
+    <label for="firstName">First Name</label>
+    <input
+      type="text"
+      name="firstName"
+      id="firstName"
+      [(ngModel)]="User.firstName"
+      required
+    />
+
+    <label for="lastName">Last Name</label>
+    <input
+      type="text"
+      name="lastName"
+      id="lastName"
+      [(ngModel)]="User.lastName"
+      required
+    />
+
+    <label for="userGender">Gender</label>
+    <select
+      name="userGender"
+      id="userGender"
+      [(ngModel)]="User.userGender"
+      required
+    >
+      <option value="" disabled selected>Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="userAge">Age</label>
+    <input
+      type="number"
+      name="userAge"
+      id="userAge"
+      [(ngModel)]="User.userAge"
+      #userAgeControl="ngModel"
+      required
+      min="0"
+    />
+    <div
+      *ngIf="userAgeControl.touched && User.userAge < 18"
+      style="color: red;"
+    >
+      Must be 18 or older
+    </div>
+
+    <label for="userCity">City</label>
+    <input
+      type="text"
+      name="userCity"
+      id="userCity"
+      [(ngModel)]="User.userCity"
+      required
+    />
+
+    <label for="userEmail">Email</label>
+    <input
+      type="email"
+      name="userEmail"
+      id="userEmail"
+      [(ngModel)]="User.userEmail"
+      required
+    />
+
+    <label for="userPassword">Password</label>
+    <input
+      type="password"
+      name="userPassword"
+      id="userPassword"
+      [(ngModel)]="User.userPassword"
+    />
+
+    <label for="confirmPassword">Confirm Password</label>
+    <input
+      type="password"
+      name="confirmPassword"
+      id="confirmPassword"
+      [(ngModel)]="confirmPassword"
+      #confirmPasswordInput
+    />
+
+    <div *ngIf="confirmPasswordInput.value !== User.userPassword">
+      Passwords do not match.
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</body>

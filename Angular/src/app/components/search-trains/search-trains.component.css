@@ -1,0 +1,141 @@
+.horizontal-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+  /* margin: 0 10px; */
+  padding: 0 20px;
+}
+
+.form-group {
+  align-items: center;
+  display: flex;
+  margin-right: 10px;
+}
+
+label {
+  padding: 0 10px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+body {
+  background-color: #17b5f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the container */
+.column-container {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style for the squares */
+.square {
+  width: 100px; /* Increased width to 150px */
+  height: 100px; /* Increased height to 150px */
+  background-color: #ddd; /* Red color */
+  margin-right: 10px; /* Add margin to create space between squares */
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Style for the table buttons */
+button {
+  width: 50%;
+  background-color: #a26769;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #472d30;
+}
+
+bookButton {
+  background-color: beige; /* Red color */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'YourSpecialFont', sans-serif; /* Replace 'YourSpecialFont' with the actual font name or font family */
+  font-size: 20px; /* Adjust the font size as needed */
+  color: #333; /* Text color */
+  margin-bottom: 10px; /* Add some bottom margin for spacing */
+  border: 2px solid #333; /* Add a border around the text */
+  padding: 10px; /* Add padding to give space between text and border */
+  text-align: center; /* Center the text horizontally */
+}
+.card {
+  margin-left: 60px;
+  background-color: #ccc;
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  background-color: #7fb685;
+}
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.cart-clicked {
+  background-color: #4aad52; /* Green color */
+  color: #fff; /* Text color */
+}

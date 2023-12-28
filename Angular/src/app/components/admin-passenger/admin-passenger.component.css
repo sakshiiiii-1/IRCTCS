@@ -1,0 +1,39 @@
+/* Style for the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Header styles */
+.table thead {
+  background-color: #343a40; /* Dark background color */
+  color: #fff; /* Text color */
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #dee2e6; /* Border color */
+}
+
+/* Alternating row colors */
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa; /* Light background color */
+}
+
+/* Button styles */
+button {
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #0056b3; /* Darker button color on hover */
+}

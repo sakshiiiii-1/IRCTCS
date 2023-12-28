@@ -1,0 +1,14 @@
+
+
+<form (ngSubmit)="updateTrain()">
+  <label for="trainId">Train ID:</label>
+  <input type="number" id="trainId" [(ngModel)]="trainToUpdate.trainId" name="trainId" required />
+
+  <label for="trainName">Train Name:</label>
+  <input type="text" id="trainName" [(ngModel)]="trainToUpdate.trainName" name="trainName" required />
+
+  <label for="trainNumber">Train Number:</label>
+  <input type="number" id="trainNumber" [(ngModel)]="trainToUpdate.trainNumber" name="trainNumber" required />
+
+  <button type="submit">Update</button>
+</form>

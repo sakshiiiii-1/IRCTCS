@@ -1,0 +1,79 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #c2c6a7;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  button {
+    background-color: #af6f4c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+  body {
+   
+    font-family: Arial, sans-serif;
+  }
+
+  /* Style for the container */
+  
+  /* Style for the squares */
+ 
+
+
+  /* Style for the table */
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Style for the table buttons */
+  button {
+    width: 100%;
+    background-color: #4d7298; /* Red color */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  button:hover {
+    background-color: #0b132b; /* Darker red on hover */
+  }
+  h1 {
+      font-family: 'YourSpecialFont', sans-serif; /* Replace 'YourSpecialFont' with the actual font name or font family */
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #333; /* Text color */
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+    border: 2px solid #333; /* Add a border around the text */
+    padding: 10px; /* Add padding to give space between text and border */
+    text-align: center; /* Center the text horizontally */
+  }

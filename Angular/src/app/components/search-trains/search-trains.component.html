@@ -1,0 +1,386 @@
+<form class="horizontal-form" (ngSubmit)="getTrains()">
+  <div class="form-group">
+    <label for="stationFrom">Station From:</label>
+    <input
+      type="text"
+      id="stationFrom"
+      [(ngModel)]="stationData.stationFrom"
+      name="stationData"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="stationTo">Station To:</label>
+    <input
+      type="text"
+      id="stationTo"
+      [(ngModel)]="stationData.stationTo"
+      name="stationTo"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="departureDate">Departure Date:</label>
+    <input
+      type="date"
+      id="departureDate"
+      [(ngModel)]="stationData.date"
+      name="departureDate"
+      required
+    />
+  </div>
+
+  <button type="submit">Search Trains</button>
+</form>
+
+<body>
+  <div *ngFor="let station of stationTrainResponse.stations">
+    <div *ngFor="let train of stationTrainResponse.trains">
+      <div>
+        <table style="width: 100%;">
+          <tr style="border-bottom: 1px solid #eee;">
+            <td style="padding: 10px; vertical-align: top;">
+              <button
+                style="
+                  width: 100%;
+                  background-color: #eee6e6;
+                  color: #0f0e0e;
+                  border: none;
+                  padding: 12px 20px;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  font-size: 16px;
+                "
+              >
+                <strong style="display: block; margin-bottom: 5px;">
+                  Name:
+                </strong>
+                {{ train.trainName }}
+              </button>
+            </td>
+            <td>
+              <button
+                style="
+                  width: 100%;
+                  background-color: #eee6e6;
+                  color: #0f0e0e;
+                  border: none;
+                  padding: 12px 20px;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  font-size: 16px;
+                "
+              >
+                <strong style="display: block; margin-bottom: 5px;">
+                  Number:
+                </strong>
+                {{ train.trainNumber }}
+              </button>
+            </td>
+            <td style="padding: 10px; vertical-align: top;"></td>
+          </tr>
+        </table>
+      </div>
+
+      <table>
+        <tr>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              Departure Date
+            </button>
+          </td>
+
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              Arrival time
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              From
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              Total Time
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              Departure Time
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              To
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              {{ station.date }}
+            </button>
+          </td>
+
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              {{ station.arrivalTime }}
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              {{ station.stationFrom }}
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              {{ station.totalTime }}
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              {{ station.reachTime }}
+            </button>
+          </td>
+          <td>
+            <button
+              style="
+                width: 100%;
+                background-color: #eee6e6;
+                color: #0f0e0e;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              {{ station.stationTo }}
+            </button>
+          </td>
+        </tr>
+      </table>
+
+      <div style="display: flex; justify-content: space-evenly;">
+        <div
+          class="card"
+          (click)="
+            priceAndClassSelected(
+              station.firstAcTicketPrice,
+              'firstAC',
+              station.firstAcTicketsAvailable
+            );
+            handleCartClick(1)
+          "
+          [ngClass]="{ 'cart-clicked': selectedCardIndex === 1 }"
+        >
+          <div class="card-content">
+            <div class="card-title">1st AC tier</div>
+            <div class="card-text">
+              Available-seats :{{ station.firstAcTicketsAvailable }}
+            </div>
+            <div class="card-text">
+              Available-price :{{ station.firstAcTicketPrice }}
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card"
+          (click)="
+            priceAndClassSelected(
+              station.secondAcTicketPrice,
+              'secondAC',
+              station.secondAcTicketsAvailable
+            );
+            handleCartClick(2)
+          "
+          [ngClass]="{ 'cart-clicked': selectedCardIndex === 2 }"
+        >
+          <div class="card-content">
+            <div class="card-title">2nd AC tier</div>
+            <div class="card-text">
+              Available-seats :{{ station.secondAcTicketsAvailable }}
+            </div>
+            <div class="card-text">
+              Available-price :{{ station.secondAcTicketPrice }}
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card"
+          (click)="
+            priceAndClassSelected(
+              station.thirdAcTicketPrice,
+              'thirdAC',
+              station.thirdAcTicketsAvailable
+            );
+            handleCartClick(3)
+          "
+          [ngClass]="{ 'cart-clicked': selectedCardIndex === 3 }"
+        >
+          <div class="card-content">
+            <div class="card-title">3rd AC tier</div>
+            <div class="card-text">
+              Available-seats :{{ station.thirdAcTicketsAvailable }}
+            </div>
+            <div class="card-text">
+              Available-price :{{ station.thirdAcTicketPrice }}
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card"
+          (click)="
+            priceAndClassSelected(
+              station.sleeperTicketPrice,
+              'sleeper',
+              station.sleeperTicketsAvailable
+            );
+            handleCartClick(4)
+          "
+          [ngClass]="{ 'cart-clicked': selectedCardIndex === 4 }"
+        >
+          <div class="card-content">
+            <div class="card-title">sleeper details</div>
+            <div class="card-text">
+              Available-seats :{{ station.sleeperTicketsAvailable }}
+            </div>
+            <div class="card-text">
+              Available-price :{{ station.sleeperTicketPrice }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <button (click)="bookTrain(station, train)" class="bookButton">
+        BOOK TICKETS
+      </button>
+    </div>
+  </div>
+</body>

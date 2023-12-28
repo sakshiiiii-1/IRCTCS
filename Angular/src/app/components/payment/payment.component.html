@@ -1,0 +1,52 @@
+<div>
+  <h3>Add Payment Details</h3>
+
+  <form>
+    <label for="cardNumber">Card Number:</label>
+    <input
+      type="number"
+      id="cardNumber"
+      [(ngModel)]="payment.cardNumber"
+      name="cardNumber"
+      required
+    />
+
+    <label for="date">Date:</label>
+    <input
+      type="number"
+      id="date"
+      [(ngModel)]="payment.date"
+      name="date"
+      required
+    />
+
+    <label for="cvv">CVV:</label>
+    <input
+      type="number"
+      id="cvv"
+      [(ngModel)]="payment.cvv"
+      name="cvv"
+      required
+    />
+
+    <label for="nameOnCard">Name on Card:</label>
+    <input
+      type="text"
+      id="nameOnCard"
+      [(ngModel)]="payment.NameonCard"
+      name="nameOnCard"
+      required
+    />
+
+    <label for="amount">Amount:</label>
+    <input
+      type="number"
+      id="amount"
+      [(ngModel)]="payment.Amount"
+      name="amount"
+      required
+    />
+
+    <button (click)="addPayments()">Pay</button>
+  </form>
+</div>

@@ -1,0 +1,478 @@
+
+<body>
+  <h1>JourneyDetails</h1>
+  <table>
+    <tr>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          From
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          To
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Arrival Time
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Reach Time
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Total Time
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Train Class
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Price per Ticket
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Number of Passengers
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Total Journey Cost
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ station.stationFrom }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ station.stationTo }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ station.arrivalTime }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ station.reachTime }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ station.totalTime }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ tclass }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ price }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ passengerCount }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ totalSum }}
+        </button>
+      </td>
+    </tr>
+  </table>
+</body>
+
+
+
+<body>
+ 
+  <table>
+    <tr>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Passenger Name
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Passenger Age
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Passenger Contact
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Passenger Country
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          Passenger Preference
+        </button>
+      </td>
+    </tr>
+    <tr *ngFor="let passenger of passengerDetails">
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ passenger.passengerName }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ passenger.passengerAge }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ passenger.passengerContact }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ passenger.passengerCountry }}
+        </button>
+      </td>
+      <td>
+        <button
+          style="
+            width: 100%;
+            background-color: #eee6e6;
+            color: #0f0e0e;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          "
+        >
+          {{ passenger.passengerPrefer }}
+        </button>
+      </td>
+    </tr>
+  </table>
+</body>
+
+
+
+
+
+
+
+<button (click)="goToPayment()">Pay Now</button>

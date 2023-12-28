@@ -1,0 +1,47 @@
+
+
+    <!-- <div class="login-container">
+        <h2>Admin Login</h2>
+        <form (ngSubmit)="onLoginButtonClick()">
+            <div class="form-group">
+                <label for="username">Admin Username:</label>
+                <input type="text" id="username" name="username" [(ngModel)]="Admin.adminName"  required>
+            </div>
+            <div class="form-group">
+                <label for="password">Admin Password:</label>
+                <input type="password" id="password" name="password" [(ngModel)]="Admin.adminPass" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div> -->
+
+    <body>
+        <div class="login-container">
+            <h2>Admin Login</h2>
+            <form (ngSubmit)="onLoginButtonClick()" oninput="checkPassword()">
+                <div class="form-group">
+                    <label for="username">Admin Username:</label>
+                    <input type="text" id="username" name="username" [(ngModel)]="Admin.adminName" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Admin Password:</label>
+                    <input type="password" id="password" name="password" [(ngModel)]="Admin.adminPass" required pattern="^(?=.[A-Za-z])(?=.\d)(?=.[@$!%#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+                    <div class="password-validation">Password should be at least 8 characters long, including at least one letter, one number, and one special character.</div>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+        </div>
+    
+        <script>
+            function checkPassword() {
+                var passwordInput = document.getElementById("password");
+                var validationMessage = document.querySelector(".password-validation");
+    
+                if (passwordInput.validity.patternMismatch) {
+                    validationMessage.style.display = "block";
+                } else {
+                    validationMessage.style.display = "none";
+                }
+            }
+        </script>
+    </body>
